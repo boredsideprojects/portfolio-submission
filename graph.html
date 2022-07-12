@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link rel="stylesheet" href="./style.css">
+    <div class="center">
+      <br />
+      <br />
+      <label>Username:</label>
+      <input oninput="this.value=this.value.toLowerCase()" id="username" />
+      <br />
+      <br />
+      <label>Passcode:</label>
+      <input type="password" id="password" />
+      <br />
+      <br />
+      <button class="button" onclick="onSubmit()">
+        Login
+      </button>
+    </div>
+  </head>
+</html>
+
+<script>
+  function onSubmit() {
+    if (
+      (document.getElementById("password").value == "user") &
+      (document.getElementById("username").value == "pass")
+    ) {
+      window.location.href = "graphunlocked.html";
+    } else {
+      {
+        window.location.href = "error.html";
+      }
+    }
+  }
+</script>
+
+<style>
+  div {
+    height: 200px;
+    width: 400px;
+    background: rgb(0, 0, 0); 
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+  }
+  .center {
+    width: 50%;
+    border: 3px solid;
+    padding: 10px;
+  }
+  html {
+    color: #f3f3f3;
+    font-family: Arial;
+  }
+  body {
+    background-color: #3AAFA9;
+  }
+  .button {
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .button:hover {
+    opacity: 1;
+  }
+</style>
